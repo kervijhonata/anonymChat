@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/css/index.css">
+
+<main>
+
+    <div class="container">
+        <div id="presentation-container">
+            <div id="title-wrapper">
+                <h1>AnonymCast</h1>
+            </div>
+            <div id="subtitle-wrapper">
+                <h2>Connect and chat with your friends!</h2>
+            </div>
+            <div id="button-wrapper">
+                <a href="#form-container" role="button" data-appearance="button:messagePopup">
+                    <span class="details">
+                        <svg width="50" height="50">
+                            <polygon points="50,50 25,10 0,50" style="fill:var(--graphic-blue)"></polygon>
+                        </svg>
+                    </span>
+                    <span class="text">Let's get started!</span>
+                </a>
+            </div>
+            <div id="image-wrapper">
+                <img src="/img/voice-chat-animate.svg" alt="floating animation" id="image-animation">
+                {{!-- <img src="#" alt="" width="100%" height="100px"> --}}
+            </div>
+        </div>
+
+        <div id="form-container">
+            <form action="/login/auth" method="post" id="form-login">
+                <div class="form-divisor" id="form-title">
+                    <h2>SIGN-IN</h2>
+                </div>
+                <div class="form-wrapper" id="email-container">
+                    <input type="email" name="email" id="input-email" required>
+                    <label for="input-email">Email</label>
+                    <span class="material-icons icon">mail</span>
+                </div>
+                <div class="form-wrapper" id="password-container">
+                    <input type="password" name="password" id="input-password" required>
+                    <label for="input-password">Password</label>
+                    <span class="material-icons icon">password</span>
+                </div>
+                <div class="form-wrapper" id="remember-container">
+                    <label for="input-remember"> <input type="checkbox" name="remember_password" id="input-remember"> Remember password</label>
+                </div>
+                <div class="form-wrapper" id="button-container">
+                    <button type="password" name="submitter" id="button-submit">LOGIN</button>
+                </div>
+                <div class="form-wrapper" id="recover-container">
+                    Forgot password? <a href="/passwordrecover">Recover here</a>.
+                </div>
+            </form>
+            <div id="or">
+                <span class="hr"></span>
+                <h3 id="text">OR</h3>
+                <span class="hr"></span>
+            </div>
+            <div id="register">
+                <p>If you don't have an account</p>
+                <a href="/register" role="button"><button id="btn-register">REGISTER</button></a>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{>_footer}}

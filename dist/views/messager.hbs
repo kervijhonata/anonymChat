@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/messager.css">
+
+<main>
+    <div class="container">
+        <div id="heading">
+            <h1>Messages</h1>
+        </div>
+        <div id="message-panel">
+            <div id="messages">
+                {{!-- <p class="message">This is a test message without time showing</p> --}}
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+                <p class="message">This is a test message with time showing<span class="message-time">20:50</span></p>
+            </div>
+        </div>
+
+        <form action="#" method="post" class="form-container" id="form-messager">
+            <div class="form-divisor" id="input-message-wrapper">
+                <input name="message" id="input-message" autocomplete="off"></textarea>
+            </div>
+            <div class="form-divisor" id="button-sender-wrapper">
+                <button type="submit" id="button-sender">Send</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+{{!-- GET :: Endpoint for socket.io :: GET --}}
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/socketMessager.js"></script>

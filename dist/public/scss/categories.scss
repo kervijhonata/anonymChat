@@ -1,0 +1,131 @@
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    #register-container {
+        width: 400px;
+        display: flex;
+        font-size: 12pt;
+        position: relative;
+        margin-bottom: 10px;
+        gap: 10px;
+
+        input {
+            width: 300px;
+            height: 40px;
+            font-size: 16pt;
+            padding: 4px;
+            box-sizing: border-box;
+
+            &:focus ~ label,
+            &:valid ~ label {
+                bottom: 46px;
+                left: 0;
+                color: #000000;
+                transition: .1s ease-in-out;
+                font-size: 12pt;
+            }
+        }
+
+        label {
+            font-size: 16pt;
+            position: absolute;
+            left: 8px;
+            bottom: 8px;
+            color: #666666;
+            transition: .1s ease-in-out;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+        }
+
+    }
+
+    #categories-container {
+        width: 400px;
+        height: 260px;
+        box-sizing: border-box;
+        padding: 14px;
+        background: white;
+        border: 2px solid blue;
+        border-radius: 20px;
+        overflow-x: auto;
+        gap: 0 10px;
+
+        .category {
+            min-width: 8px;
+            min-height: 30px;
+            background: blue;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 10px;
+            float: left;
+            margin: 4px 5px;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: {
+                size: 10pt;
+            }
+
+            &::after {
+                visibility: hidden;
+                content: "remove";
+                background: #ff0000;
+                width: 100%;
+                height: 100%;
+                padding: 4px 10px;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                box-sizing: border-box;
+                top: 0;
+                left: 0;
+            }
+
+            &:hover::after {
+                visibility: visible;
+            }
+        }
+    }
+
+    #controls-container {
+        margin-top: 20px;
+        button {
+            padding: 4px 8px;
+            font: {
+                size: 12pt;
+            }
+        }
+    }
+}
+
+// Class PopUpper
+.popupper {
+    &.modal {
+        width: 300px;
+        margin: auto auto;
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 20px;
+        
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &::backdrop {
+        background: white;
+    }
+}

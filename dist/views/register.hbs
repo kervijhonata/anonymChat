@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/register.css">
+
+<main>
+    <div class="container">
+
+        <div id="form-container">
+            <form action="/register/auth" method="post" id="form-register" autocomplete="off">
+                <div class="form-divisor" id="title-wrapper">
+                    <h2>Register</h2>
+                </div>
+                <div class="form-wrapper" id="nickname-wrapper">
+                    <input type="text" name="nickname" id="input-nickname" required>
+                    <label for="input-nickname" class="label">Nickname</label>
+                </div>
+                <div class="form-wrapper" id="email-wrapper">
+                    <input type="email" name="email" id="input-email" required>
+                    <label for="input-email" class="label">email</label>
+                </div>
+                <div class="form-wrapper" id="password-wrapper">
+                    <input type="password" name="password" id="input-password" required>
+                    <label for="input-wrapper" class="label">Password</label>
+                </div>
+                <div class="form-wrapper" id="repeat-wrapper">
+                    <input type="password" name="password" id="input-repeat" required>
+                    <label for="input-repeat" class="label">Repeat password</label>
+                </div>
+                <div class="form-wrapper" id="submit-wrapper">
+                    <button type="submit" class="btn" id="button-submit" class="btn">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<script src="/js/FormRegisterValidator.js"></script>
+
+{{>_footer}}

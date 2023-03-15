@@ -1,0 +1,112 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container #register-container {
+  width: 400px;
+  display: flex;
+  font-size: 12pt;
+  position: relative;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.container #register-container input {
+  width: 300px;
+  height: 40px;
+  font-size: 16pt;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.container #register-container input:focus ~ label, .container #register-container input:valid ~ label {
+  bottom: 46px;
+  left: 0;
+  color: #000000;
+  transition: 0.1s ease-in-out;
+  font-size: 12pt;
+}
+.container #register-container label {
+  font-size: 16pt;
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  color: #666666;
+  transition: 0.1s ease-in-out;
+}
+.container #register-container button {
+  width: 100px;
+  height: 40px;
+}
+.container #categories-container {
+  width: 400px;
+  height: 260px;
+  box-sizing: border-box;
+  padding: 14px;
+  background: white;
+  border: 2px solid blue;
+  border-radius: 20px;
+  overflow-x: auto;
+  gap: 0 10px;
+}
+.container #categories-container .category {
+  min-width: 8px;
+  min-height: 30px;
+  background: blue;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 10px;
+  float: left;
+  margin: 4px 5px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10pt;
+}
+.container #categories-container .category::after {
+  visibility: hidden;
+  content: "remove";
+  background: #ff0000;
+  width: 100%;
+  height: 100%;
+  padding: 4px 10px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+}
+.container #categories-container .category:hover::after {
+  visibility: visible;
+}
+.container #controls-container {
+  margin-top: 20px;
+}
+.container #controls-container button {
+  padding: 4px 8px;
+  font-size: 12pt;
+}
+
+.popupper.modal {
+  width: 300px;
+  margin: auto auto;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 20px;
+}
+.popupper.modal header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.popupper::backdrop {
+  background: white;
+}
+
+/*# sourceMappingURL=categories.css.map */

@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="/css/flashMessages.css">
+
+<div id="flash-container">
+
+    {{#each successMessage}}
+        {{!-- <p class="flash-message success-message">{{this}}</p> --}}
+        <dialog class="flash-message success-message" data-dialog-name="flash-successMessage" open>
+            <div class="flash-message-text-wrapper">
+                <p class="flash-message-text">{{this}}</p>
+            </div>
+            <div class="flash-message-button-wrapper">
+                <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-successMessage" onclick="closeDialog(this)">
+                    <span class="material-icons">check</span>
+                </a>
+            </div>
+        </dialog>
+    {{/each}}
+
+    {{#each errorMessage}}
+        <dialog class="flash-message error-message" data-dialog-name="flash-errorMessage" open>
+            <div class="flash-message-text-wrapper">
+                <p class="flash-message-text">{{this}}</p>
+            </div>
+            <div class="flash-message-button-wrapper">
+                <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-errorMessage" onclick="closeDialog(this)">
+                    <span class="material-icons">close</span>
+                </a>
+            </div>
+        </dialog>
+    {{/each}}
+
+    {{#each infoMessage}}
+        <dialog class="flash-message info-message" data-dialog-name="flash-infosuccessMessage" open>
+            <div class="flash-message-text-wrapper">
+                <p class="flash-message-text">{{this}}</p>
+            </div>
+            <div class="flash-message-button-wrapper">
+                <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-infoMessage" onclick="closeDialog(this)">
+                    <span class="material-icons">check</span>
+                </a>
+            </div>
+        </dialog>
+    {{/each}}
+
+    {{#each warnMessage}}
+        <dialog class="flash-message warn-message" data-dialog-name="flash-warnMessage" open>
+            <div class="flash-message-text-wrapper">
+                <p class="flash-message-text">{{this}}</p>
+            </div>
+            <div class="flash-message-button-wrapper">
+                <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-warnMessage" onclick="closeDialog(this)">
+                    <span class="material-icons">close</span>
+                </a>
+            </div>
+        </dialog>
+    {{/each}}
+
+    {{!--
+    <dialog class="flash-message info-message" data-dialog-name="flash-infoMessage" open>
+        <div class="flash-message-text-wrapper">
+            <p class="flash-message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere ab incidunt repudiandae enim quae qui, nulla iure atque autem, natus, corporis cupiditate? Esse minima placeat ullam quasi id praesentium!</p>
+        </div>
+        <div class="flash-message-button-wrapper">
+            <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-infoMessage" onclick="closeDialog(this)" title="Close this message">
+                <span class="material-icons">check</span>
+            </a>
+        </div>
+    </dialog>
+
+    <dialog class="flash-message success-message" data-dialog-name="flash-successMessage" open>
+        <div class="flash-message-text-wrapper">
+            <p class="flash-message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere ab incidunt repudiandae enim quae qui, nulla iure atque autem, natus, corporis cupiditate? Esse minima placeat ullam quasi id praesentium!</p>
+        </div>
+        <div class="flash-message-button-wrapper">
+            <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-successMessage" onclick="closeDialog(this)" title="Close this message">
+                <span class="material-icons">check</span>
+            </a>
+        </div>
+    </dialog>
+
+    <dialog class="flash-message warn-message" data-dialog-name="flash-warnMessage" open>
+        <div class="flash-message-text-wrapper">
+            <p class="flash-message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere ab incidunt repudiandae enim quae qui, nulla iure atque autem, natus, corporis cupiditate? Esse minima placeat ullam quasi id praesentium!</p>
+        </div>
+        <div class="flash-message-button-wrapper">
+            <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-warnMessage" onclick="closeDialog(this)" title="Close this message">
+                <span class="material-icons">close</span>
+            </a>
+        </div>
+    </dialog>
+
+    <dialog class="flash-message error-message" data-dialog-name="flash-errorMessage" open>
+        <div class="flash-message-text-wrapper">
+            <p class="flash-message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere ab incidunt repudiandae enim quae qui, nulla iure atque autem, natus, corporis cupiditate? Esse minima placeat ullam quasi id praesentium!</p>
+        </div>
+        <div class="flash-message-button-wrapper">
+            <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-errorMessage" onclick="closeDialog(this)" title="Close this message">
+                <span class="material-icons">close</span>
+            </a>
+        </div>
+    </dialog>
+
+    <dialog class="flash-message genericMessage-message" data-dialog-name="flash-genericMessage" open>
+        <div class="flash-message-text-wrapper">
+            <p class="flash-message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere ab incidunt repudiandae enim quae qui, nulla iure atque autem, natus, corporis cupiditate? Esse minima placeat ullam quasi id praesentium!</p>
+        </div>
+        <div class="flash-message-button-wrapper">
+            <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-genericMessage" onclick="closeDialog(this)" title="Close this message">
+                <span class="material-icons">close</span>
+            </a>
+        </div>
+    </dialog>
+
+    <dialog class="flash-message genericMessage-message" data-dialog-name="flash-genericMessage-2" open>
+        <div class="flash-message-text-wrapper">
+            <p class="flash-message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere ab incidunt repudiandae enim quae qui, nulla iure atque autem, natus, corporis cupiditate? Esse minima placeat ullam quasi id praesentium!</p>
+        </div>
+        <div class="flash-message-button-wrapper">
+            <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-genericMessage-2" onclick="closeDialog(this)" title="Close this message">
+                <span class="material-icons">close</span>
+            </a>
+        </div>
+    </dialog>
+    --}}
+    
+
+</div>
+
+<script src="/js/flashMessages.js"></script>

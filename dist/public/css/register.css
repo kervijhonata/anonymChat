@@ -1,0 +1,77 @@
+main .container {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container #form-container #form-register {
+  width: 300px;
+  background-color: var(--white);
+  color: #000000;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+main .container #form-container #form-register * {
+  color: #000000;
+}
+main .container #form-container #form-register .form-wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+main .container #form-container #form-register .form-wrapper input[type=text],
+main .container #form-container #form-register .form-wrapper input[type=email],
+main .container #form-container #form-register .form-wrapper input[type=password] {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000000;
+  padding: 4px 30px 4px 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 12pt;
+}
+main .container #form-container #form-register .form-wrapper input[type=text]:focus ~ .label, main .container #form-container #form-register .form-wrapper input[type=text]:valid ~ .label,
+main .container #form-container #form-register .form-wrapper input[type=email]:focus ~ .label,
+main .container #form-container #form-register .form-wrapper input[type=email]:valid ~ .label,
+main .container #form-container #form-register .form-wrapper input[type=password]:focus ~ .label,
+main .container #form-container #form-register .form-wrapper input[type=password]:valid ~ .label {
+  bottom: 34px;
+}
+main .container #form-container #form-register .form-wrapper .label {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
+main .container #form-container #form-register #title-wrapper {
+  margin-bottom: 40px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container #form-container #form-register #nickname-wrapper {
+  margin-bottom: 40px;
+}
+main .container #form-container #form-register #email-wrapper {
+  margin-bottom: 40px;
+}
+main .container #form-container #form-register #password-wrapper {
+  margin-bottom: 40px;
+}
+main .container #form-container #form-register #repeat-wrapper {
+  margin-bottom: 40px;
+}
+main .container #form-container #form-register #submit-wrapper #button-submit {
+  background: var(--graphic-blue);
+  color: #ffffff;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=register.css.map */

@@ -1,0 +1,204 @@
+main .container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+main .container #presentation-container {
+  width: 100%;
+  min-height: 490px;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  place-self: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+main .container #presentation-container #title-wrapper {
+  text-align: center;
+}
+main .container #presentation-container #subtitle-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+main .container #presentation-container #button-wrapper {
+  margin-bottom: 10px;
+}
+main .container #presentation-container #button-wrapper a {
+  width: 200px;
+  height: 40px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--graphic-blue);
+  position: relative;
+  color: #fff;
+  font-size: 16pt;
+}
+main .container #presentation-container #button-wrapper a .text {
+  position: relative;
+  font-size: 14pt;
+}
+main .container #presentation-container #button-wrapper a .details {
+  position: absolute;
+  transform: rotate(180deg);
+  right: 30px;
+  top: 10px;
+}
+main .container #presentation-container #image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .container #presentation-container #image-wrapper #image-animation {
+  height: 300px;
+}
+main .container #form-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .container #form-container #form-login {
+  width: 300px;
+  background-color: var(--white);
+  color: #000000;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+main .container #form-container #form-login .form-wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+main .container #form-container #form-login .form-wrapper input[type=email],
+main .container #form-container #form-login .form-wrapper input[type=password] {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000000;
+  padding: 4px 30px 4px 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 12pt;
+}
+main .container #form-container #form-login .form-wrapper .icon {
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+}
+main .container #form-container #form-login #form-title {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+main .container #form-container #form-login #email-container {
+  margin-bottom: 40px;
+}
+main .container #form-container #form-login #email-container #input-email:focus ~ label, main .container #form-container #form-login #email-container #input-email:valid ~ label {
+  bottom: 34px;
+}
+main .container #form-container #form-login #email-container label {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
+main .container #form-container #form-login #password-container {
+  margin-bottom: 10px;
+}
+main .container #form-container #form-login #password-container #input-password:focus ~ label, main .container #form-container #form-login #password-container #input-password:valid ~ label {
+  bottom: 34px;
+}
+main .container #form-container #form-login #password-container label {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
+main .container #form-container #form-login #remember-container {
+  margin-bottom: 20px;
+}
+main .container #form-container #form-login #remember-container #input-remember {
+  width: 14pt;
+  height: 14pt;
+}
+main .container #form-container #form-login #button-container #button-submit {
+  width: 100%;
+  height: 40px;
+  background: var(--graphic-blue);
+  border: none;
+  border-radius: 20px;
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  font-weight: "600";
+}
+main .container #form-container #form-login #recover-container {
+  margin-bottom: 0px;
+}
+main .container #form-container #or {
+  display: grid;
+  grid-template-columns: 5fr 2fr 5fr;
+  margin: 10px 0;
+  justify-content: space-evenly;
+  align-items: center;
+  place-content: space-evenly;
+  place-items: space-evenly;
+}
+main .container #form-container #or .hr {
+  width: 100%;
+  height: 0px;
+  border-bottom: 1px solid white;
+}
+main .container #form-container #or #text {
+  padding: 0 8px;
+}
+main .container #form-container #register {
+  width: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+main .container #form-container #register * {
+  color: #000000;
+}
+main .container #form-container #register #btn-register {
+  width: 100%;
+  height: 40px;
+  background: var(--graphic-blue);
+  border: none;
+  border-radius: 20px;
+  color: var(--white);
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  main .container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+  main .container #landing-container {
+    width: 100%;
+    min-height: 100vh;
+  }
+  main .container #form-container {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,73 @@
+// Flash messages
+#flash-container {
+    width: 100%;
+    max-height: 100vh;
+    z-index: 10;
+    background-color: var(--global-background-color);
+    position: fixed;
+    top: 0;
+    overflow-x: auto;
+
+    .flash-message {
+        width: 90%;
+        min-height: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        margin: 20px auto;
+        position: relative;
+        grid-template-columns: auto 26px;
+        gap: 10px;
+        
+        // Open State
+        &[open]{
+            display: grid;
+        }
+
+        // 
+        &::backdrop {
+            color: var(--global-background-color);
+        }
+
+    
+        &.info-message {
+            background-color: #29B6F6;
+            color: #000000;
+        }
+        &.success-message {
+            background-color: #43A047;
+            color: #ffffff;
+        }
+        &.warn-message {
+            background-color: #FB8C00;
+            color: #000000;
+        }
+        &.error-message {
+            background-color: #F44336;
+            color: #ffffff;
+        }
+    
+        .flash-message-text-wrapper {
+            width: 100%;
+        }
+        .flash-message-button-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            color: #000000;
+    
+            .flash-message-button {
+                width: 26px;
+                height: 26px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                background-color: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+
+            }
+        }
+    }
+}

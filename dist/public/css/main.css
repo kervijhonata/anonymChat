@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons");
+:root {
+  --dark-purple: #32323b;
+  --white: #ffffff;
+  --graphic-blue: #4a4add;
+  --ultrablue: #4a4add;
+  --dark--background-color: var(--dark-purple);
+  --dark--graphic-background-color: var(--ultrablue);
+  --global-background-color: var(--dark--background-color);
+  --global-graphic-background-color: var(--dark--background-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  background-color: var(--global-background-color);
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+#main-footer {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #00000075;
+}
+#main-footer * {
+  font-family: "Consolas", monospace;
+}
+#main-footer a {
+  color: var(--global-graphic-background-color);
+}
+#main-footer a:hover, #main-footer a:focus {
+  filter: brightness(200%);
+}
+
+button,
+.btn,
+a[role=button] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: 0.1s ease-in filter;
+}
+button:focus, button:hover,
+.btn:focus,
+.btn:hover,
+a[role=button]:focus,
+a[role=button]:hover {
+  filter: brightness(110%);
+}
+button:active,
+.btn:active,
+a[role=button]:active {
+  filter: brightness(90%);
+}
+
+img,
+.img {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+/*# sourceMappingURL=main.css.map */
