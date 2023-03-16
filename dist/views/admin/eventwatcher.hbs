@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/EventEngine.css">
+<main>
+    <div class="container">
+        <div id="output">
+            <!--p class="output"><span class="detail">> </span>test</p-->
+        </div>
+        <div id="controls">
+            <div id="wrapper-heading">
+                <strong>Select an event and emit then</strong> pressing this button below.
+            </div>
+            <form action="#" id="wrapper-controls">
+                <select name="eventType" id="select-eventType">
+                    <option value="" disabled selected>Please select..</option>
+                    <option value="informational response">Response info</option>
+                    <option value="successfull response">Success</option>
+                    <option value="redirection message">Redirect error</option>
+                    <option value="client error response">Client response error</option>
+                    <option value="server error response">Server response error</option>
+                </select>
+                <button type="submit" id="btn-submit" class="btn" data-reference="btnFormSubmitter">EMIT</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="/js/eventwatcher.js" type="module"></script>

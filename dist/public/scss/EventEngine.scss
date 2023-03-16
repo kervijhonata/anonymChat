@@ -1,0 +1,136 @@
+:root {
+    // Colors
+    --darkBlue: hsl(210deg, 10%, 20%);
+    --white: #ffffff;
+    --vibrantBlue: hsl(230deg, 80%, 46%);
+
+    // Theme
+    //DarkMode:Default
+    --DarkMode--backgroundColor: var(--darkBlue);
+    --DarkMode--textColor-bgContrast: var(--white);
+    --DarkMode--graphic-bgColor: var(--vibrantBlue);
+    --DarkMode--graphic-textColor-bgColor: var(--white);
+
+    // Globals
+    --backgroundColor: var(--DarkMode--backgroundColor);
+    --text-textColor-bgContrast: var(--DarkMode--textColor-bgContrast);
+    --graphic-bgColor: var(--DarkMode--graphic-bgColor);
+    --grapic-textColor-bgContrast: var(--DarkMode-graphic-textColor-bgContrast);
+}
+
+* {
+    color: #ffffff;
+    font: {
+        family: "Poppins", sans-serif;
+    }
+}
+html {
+    background-color: var(--backgroundColor);
+}
+
+.btn {
+    cursor: pointer;
+    min-width: 20px;
+    padding: 4px 12px;
+    transition: 0.2s ease-in-out;
+    font: {
+        family: "Poppins", sans-serif;
+        size: 12pt;
+    }
+
+    &:focus,
+    &:hover {
+        filter: brightness(120%);
+    }
+    &:active {
+        filter: brightness(80%);
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    #output {
+        width: 90vw;
+        height: 200px;
+        background-color: hsl(210deg, 10%, 90%);
+        margin-bottom: 40px;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        border: 8px double var(--graphic-bgColor);
+        border-radius: 20px;
+        overflow-x: auto;
+        /*overflow-y: scroll;
+       overflow: scroll;
+       white-space: nowrap;*/
+        color: hsl(230deg, 40%, 30%);
+        display: flex;
+        flex-flow: column-reverse;
+        font: {
+            family: monospace;
+            size: 12pt;
+        }
+
+        .output,
+        p {
+            width: 100%;
+            margin: 0;
+            color: #000000;
+            font: {
+                family: monospace;
+                size: 12pt;
+            }
+
+            &:hover > span {
+                background-color: hsl(230deg, 80%, 46%);
+                color: white;
+            }
+
+            .detail,
+            span {
+                -webkit-user-select: none;
+                user-select: none;
+                color: var(--graphic-bgColor);
+                font: {
+                    family: monospace;
+                    size: 12pt;
+                }
+            }
+        }
+    }
+    #controls {
+        width: 300px;
+        min-height: 40px;
+        display: flex;
+        flex-flow: column;
+        color: #000000;
+
+        #wrapper-heading {
+            margin-bottom: 10px;
+        }
+        #wrapper-controls {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 10px;
+
+            #select-eventType,
+            * {
+                color: #000000;
+            }
+            #btn-submit {
+                width: auto;
+                height: 40px;
+                border: none;
+                border-radius: 20px;
+                padding: 4px 20px;
+                background-color: var(--graphic-bgColor);
+                color: var(--graphic-textcolor-bgContrast);
+            }
+        }
+    }
+}

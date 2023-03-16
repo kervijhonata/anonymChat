@@ -1,0 +1,118 @@
+:root {
+  --darkBlue: hsl(210deg, 10%, 20%);
+  --white: #ffffff;
+  --vibrantBlue: hsl(230deg, 80%, 46%);
+  --DarkMode--backgroundColor: var(--darkBlue);
+  --DarkMode--textColor-bgContrast: var(--white);
+  --DarkMode--graphic-bgColor: var(--vibrantBlue);
+  --DarkMode--graphic-textColor-bgColor: var(--white);
+  --backgroundColor: var(--DarkMode--backgroundColor);
+  --text-textColor-bgContrast: var(--DarkMode--textColor-bgContrast);
+  --graphic-bgColor: var(--DarkMode--graphic-bgColor);
+  --grapic-textColor-bgContrast: var(--DarkMode-graphic-textColor-bgContrast);
+}
+
+* {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  background-color: var(--backgroundColor);
+}
+
+.btn {
+  cursor: pointer;
+  min-width: 20px;
+  padding: 4px 12px;
+  transition: 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  font-size: 12pt;
+}
+.btn:focus, .btn:hover {
+  filter: brightness(120%);
+}
+.btn:active {
+  filter: brightness(80%);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.container #output {
+  width: 90vw;
+  height: 200px;
+  background-color: #e3e6e8;
+  margin-bottom: 40px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  border: 8px double var(--graphic-bgColor);
+  border-radius: 20px;
+  overflow-x: auto;
+  /*overflow-y: scroll;
+  overflow: scroll;
+  white-space: nowrap;*/
+  color: #2e386b;
+  display: flex;
+  flex-flow: column-reverse;
+  font-family: monospace;
+  font-size: 12pt;
+}
+.container #output .output,
+.container #output p {
+  width: 100%;
+  margin: 0;
+  color: #000000;
+  font-family: monospace;
+  font-size: 12pt;
+}
+.container #output .output:hover > span,
+.container #output p:hover > span {
+  background-color: #1737d3;
+  color: white;
+}
+.container #output .output .detail,
+.container #output .output span,
+.container #output p .detail,
+.container #output p span {
+  -webkit-user-select: none;
+  user-select: none;
+  color: var(--graphic-bgColor);
+  font-family: monospace;
+  font-size: 12pt;
+}
+.container #controls {
+  width: 300px;
+  min-height: 40px;
+  display: flex;
+  flex-flow: column;
+  color: #000000;
+}
+.container #controls #wrapper-heading {
+  margin-bottom: 10px;
+}
+.container #controls #wrapper-controls {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 10px;
+}
+.container #controls #wrapper-controls #select-eventType,
+.container #controls #wrapper-controls * {
+  color: #000000;
+}
+.container #controls #wrapper-controls #btn-submit {
+  width: auto;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 4px 20px;
+  background-color: var(--graphic-bgColor);
+  color: var(--graphic-textcolor-bgContrast);
+}
+
+/*# sourceMappingURL=EventEngine.css.map */

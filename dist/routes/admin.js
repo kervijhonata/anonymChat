@@ -13,5 +13,10 @@ router.get("/categories", (req, res, next) => {
     res.render("./admin/categories")
 })
 
+router.get("/events/watcher", (req, res, next) => {
+    res.render("./admin/eventwatcher")
+})
+
+
 // Exportion
 module.exports = router

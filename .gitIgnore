@@ -1,6 +1,8 @@
 # Dir
 /node_modules
+/src
 
 # Files
 package-lock.json
 package.json
+.gitIgnore
