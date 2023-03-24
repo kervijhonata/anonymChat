@@ -1,1 +1,1 @@
-{"users":[{"nickname":"kervi","email":"kervij@gmail.com","passwords":["fakepsrd00","fakepsrd00"]},{"nickname":"teste","email":"teste@teste.com","passwords":["teste000","teste000"]}]}
+{"users":[{"nickname":"kervi","email":"kervij@gmail.com","password":"fakepsrd00"},{"nickname":"teste","email":"teste@teste.com","password":"teste000"},{"nickname":"Admin","email":"admin@admin.com","password":"admin000"},{"nickname":"test","email":"test@test.com","password":"test0000"}]}

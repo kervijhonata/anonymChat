@@ -5,4 +5,5 @@
 # Files
 package-lock.json
 package.json
-.gitIgnore
+.gitignore
+.env

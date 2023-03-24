@@ -55,6 +55,18 @@
         </dialog>
     {{/each}}
 
+    {{#each errors}}
+        <dialog class="flash-message {{this.type}}" data-dialog-name="flash-error-{{this.errorID}}" open>
+            <div class="flash-message-text-wrapper">
+                <p class="flash-message-text">{{this.text}}</p>
+            </div>
+            <div class="flash-message-button-wrapper">
+                <a href="#" role="button" class="flash-message-button" data-dialog-close="flash-error-{{this.errorID}}" onclick="closeDialog(this)">
+                    <span class="material-icons">close</span>
+                </a>
+            </div>
+        </dialog>
+    {{/each}}
     {{!--
     <dialog class="flash-message info-message" data-dialog-name="flash-infoMessage" open>
         <div class="flash-message-text-wrapper">
